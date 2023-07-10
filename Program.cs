@@ -1,18 +1,19 @@
 ﻿/*
-Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно
-7 и 23.
+Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
 
-14 -> нет
-46 -> нет
-161 -> да
+5, 25 -> да
+-4, 16 -> да
+25, 5 -> да
+8,9 -> нет
 */
 
 
 Console.Clear();
 Console.Write("Введите число ");
-int n = Convert.ToInt32(Console.ReadLine());
-// "&&" - и; "||" - или
-if (n % 7 == 0 || n % 23 == 0)
-    Console.WriteLine("yes");
-else 
-    Console.WriteLine("no");
+int FirstNumber = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число ");
+int SecondNumber = Convert.ToInt32(Console.ReadLine());
+if (FirstNumber * FirstNumber == SecondNumber || SecondNumber * SecondNumber == FirstNumber)
+    Console.WriteLine("Yes");
+else
+    Console.WriteLine("No");
